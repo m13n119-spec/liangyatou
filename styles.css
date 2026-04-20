@@ -112,16 +112,44 @@ nav {
 }
 
 .hero .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
 }
 
 .hero-content h1 {
     font-size: 3rem;
-    line-height: 1.2;
+    line-height: 1.3;
     margin-bottom: 20px;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 40px;
+    margin: 30px 0;
+    justify-content: center;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--gray);
 }
 
 .highlight {
@@ -226,6 +254,173 @@ nav {
     font-size: 0.9rem;
     font-weight: 600;
     color: var(--dark);
+}
+
+/* ============================================
+   Problem Section
+   ============================================ */
+
+.problem {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.problem h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+}
+
+.problem-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.problem-card {
+    background: var(--light);
+    padding: 30px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-left: 4px solid var(--primary);
+}
+
+.problem-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+}
+
+.problem-card p {
+    color: var(--gray);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* ============================================
+   Agent Team Section
+   ============================================ */
+
+.agent-team {
+    padding: 80px 0;
+    background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
+}
+
+.agent-team h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--gray);
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.team-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+    box-shadow: 0 15px 40px rgba(99,102,241,0.15);
+}
+
+.team-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.team-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--dark);
+}
+
+.team-card p {
+    color: var(--gray);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* ============================================
+   Case Study Preview
+   ============================================ */
+
+.case-preview {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.case-preview h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+}
+
+.case-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #eef2ff 0%, #f8fafc 100%);
+    padding: 50px;
+    border-radius: 24px;
+    border: 2px solid var(--primary);
+}
+
+.case-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.case-text ul {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.case-text ul li {
+    padding: 10px 0;
+    padding-left: 30px;
+    position: relative;
+    color: var(--gray);
+}
+
+.case-text ul li::before {
+    content: "✅";
+    position: absolute;
+    left: 0;
+}
+
+.case-quote {
+    font-style: italic;
+    color: var(--dark) !important;
+    border-left: 4px solid var(--primary);
+    padding-left: 20px;
+    margin: 25px 0 10px !important;
+}
+
+.case-source {
+    color: var(--gray) !important;
+    font-size: 0.95rem !important;
+}
+
+.case-source::before {
+    content: "— ";
 }
 
 /* ============================================
@@ -369,6 +564,16 @@ nav {
 .cta .btn-primary:hover {
     background: var(--secondary);
     color: var(--white);
+}
+
+.cta-buttons {
+    margin: 30px 0;
+}
+
+.cta-note {
+    font-size: 0.95rem;
+    opacity: 0.8;
+    margin-top: 20px;
 }
 
 /* ============================================
